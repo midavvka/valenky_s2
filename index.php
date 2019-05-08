@@ -1,6 +1,7 @@
 <?php 
 // index.php
 $model_name = 'main';
+session_start();
 
 if(!empty($_GET['model']))
 	$model_name = $_GET['model'];
@@ -10,6 +11,7 @@ $view_file = 'view/'. $model_name . '_view.php';
  
 if (file_exists($model_file)) {
 	include $model_file;
+	$cart_len = count($_SESSION['cart']);
 }
 else{
 	echo "404"; //header('HTTP/1.1 404 Not Found');

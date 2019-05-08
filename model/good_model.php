@@ -27,7 +27,11 @@ if(!empty($_GET['id'])){
 	// Обработка результатов
 	$good = mysqli_fetch_assoc($res);
 	// Закрываем соединение
-	mysqli_close($mysqli);	
+	mysqli_close($mysqli);
+
+	if (isset($_POST['count'])) {
+		$_SESSION['cart'][$id] = (int)$_POST['count'];
+	}	
 }
 
  ?>

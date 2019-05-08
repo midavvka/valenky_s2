@@ -41,9 +41,9 @@
               
             </p>
 
-            <form class="d-flex justify-content-left">
+            <form method="post" class="d-flex justify-content-left">
               <!-- Default input -->
-              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+              <input name="count" type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
               <button class="btn btn-primary btn-md my-0 p" type="submit">Добавить в корзину
                 <i class="fa fa-shopping-cart ml-1"></i>
               </button>
